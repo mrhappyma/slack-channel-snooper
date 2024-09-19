@@ -11,7 +11,7 @@ app.event("channel_created", async ({ event, client }) => {
   for (const person of people) {
     await client.chat.postMessage({
       channel: person,
-      text: `<#${event.channel.id}>`,
+      text: `<#${event.channel.id}> created by <@${event.channel.creator}>`,
     });
   }
 });
