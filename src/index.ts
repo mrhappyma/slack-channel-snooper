@@ -12,6 +12,24 @@ app.event("channel_created", async ({ event, client }) => {
     await client.chat.postMessage({
       channel: person,
       text: `<#${event.channel.id}> created by <@${event.channel.creator}>`,
+      blocks: [
+        {
+          type: "section",
+          text: {
+            type: "mrkdwn",
+            text: `<#${event.channel.id}> created by <@${event.channel.creator}>`,
+          },
+        },
+        {
+          type: "context",
+          elements: [
+            {
+              type: "mrkdwn",
+              text: `<!subteam^S07MTSEBEK1`,
+            },
+          ],
+        },
+      ],
     });
   }
 });
