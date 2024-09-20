@@ -25,7 +25,7 @@ app.event("channel_created", async ({ event, client }) => {
           elements: [
             {
               type: "mrkdwn",
-              text: `<!subteam^S07MTSEBEK1`,
+              text: `<!subteam^S07MTSEBEK1>`,
             },
           ],
         },
