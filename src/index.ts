@@ -17,7 +17,7 @@ app.event("channel_created", async ({ event, client }) => {
           type: "section",
           text: {
             type: "mrkdwn",
-            text: `<#${event.channel.id}> (<${event.channel.name}) created by <@${event.channel.creator}>`,
+            text: `<#${event.channel.id}> (#${event.channel.name}) created by <@${event.channel.creator}>`,
           },
         },
         {
